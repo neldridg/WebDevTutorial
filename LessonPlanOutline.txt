@@ -1,0 +1,43 @@
+# Core Objectives
+* HTML
+    * History and best practices
+    * Link tags
+    * Common layouts
+    * Top 
+* CSS
+    * Classes
+    * Id
+    * Selectors
+    * Pseudo Selectors
+    * Precidence
+    * Libraries (Bootstrap, MaterialUI, SemanticUI, UIKit, etc.)
+* JavaScript
+    * HTML script tags
+    * How to look for elements
+    * Console logging
+    * Basic syntax
+    * Event listeners
+    * Using libraries (JQuery, others)
+    * SPA (Vue, React, Angular)
+* JSON
+    * What it actually is
+    * Sctructure
+    * Advantages/Disadvantages
+* NodeJS
+    * Build tools (npm, webpack, grunt, etc.)
+    * Web service and responses
+    * Routing basics
+* SQL/NoSQL
+    * Explain pros/cons
+* API Styles
+    * REST
+    * GraphQL
+    * gRPC
+* Frameworks
+    * Django
+        * Start a project
+        * Routing
+        * Templating
+    * ASP.NET
+        * High level language web layouts
+        * Reflective properties
