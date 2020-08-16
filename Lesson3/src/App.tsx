@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
 import './styles/App.scss';
-import SampleComponent from "./components/SampleComponent";
+import HomeComponent from './components/HomeComponent';
+import AboutComponent from './components/AboutComponent';
+import ContactComponent from './components/ContactComponent';
+import NavMenuComponent from './components/NavMenuComponent';
 
 interface AppProps {
   // Props go here
@@ -13,10 +21,20 @@ export default class App extends Component<AppProps> {
 
   render() {
     return (
-      <div>
-        <h1>Hello world!</h1>
-        <SampleComponent />
-      </div>
-    )
+      <Router>
+        <NavMenuComponent />
+        <Switch>
+          <Route path="/about">
+            <AboutComponent></AboutComponent>
+          </Route>
+          <Route path="/contact">
+            <ContactComponent></ContactComponent>
+          </Route>
+          <Route path="/" >
+            <HomeComponent />
+          </Route>
+        </Switch>
+      </Router>
+    );
   }
 }
