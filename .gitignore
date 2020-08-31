@@ -6,3 +6,4 @@ package-lock.json
 **/*.sqlite3
 **/__pycache__
 **/media
+**/.vscode
