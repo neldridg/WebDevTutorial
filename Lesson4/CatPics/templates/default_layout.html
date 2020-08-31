@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         {% block title %}<title>Cat Pics</title>{% endblock %}
-        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     </head>
     <body>
     {% block navbar %}
@@ -52,6 +52,6 @@
     </div>
     </body>
     <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     {% block scripts %}{% endblock %}
 </html>
