@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/HomeComponent.scss'
+import '../styles/HomeComponent.scss';
 
 interface HomeComponentProps {
 

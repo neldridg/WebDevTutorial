@@ -30,7 +30,7 @@ export default class NavMenuComponent extends Component<NavMenuComponentProps, N
             <button className="close-button" onClick={() => this.toggleItems() }>☰</button>
             {
               this.state.shouldShowItems &&
-              <ul className={`nav-list ${this.state.shouldShowItems ? "" : "hidden"}`}>
+              <ul className="nav-list">
                 <li className="nav-list-item">
                     <Link to="/">Home</Link>
                 </li>
@@ -39,6 +39,9 @@ export default class NavMenuComponent extends Component<NavMenuComponentProps, N
                 </li>
                 <li className="nav-list-item">
                     <Link to="/contact">Contact</Link>
+                </li>
+                <li className="nav-list-item">
+                  <Link to="/list">List</Link>
                 </li>
               </ul>
             }

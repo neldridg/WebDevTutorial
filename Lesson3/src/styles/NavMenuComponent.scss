@@ -1,11 +1,13 @@
+$backgroundColor: #343a40;
+
 .nav-menu {
-    background-color: #343a40;
+    background-color: $backgroundColor;
     margin: 0;
     width: 100vw;
-}
 
-.nav-menu > .close-button {
-    display: none;
+  > .close-button {
+      display: none;
+  }
 }
 
 .nav-list {
@@ -13,22 +15,23 @@
     display: flex;
     margin: 0;
     padding: 0;
-}
 
-.nav-list > .nav-list-item {
-    margin: 1vw;
-    font-size: 3vh;
-}
+  > .nav-list-item {
+      margin: 1vw;
+      font-size: 3vh;
+  }
 
-.nav-list > .nav-list-item > a {
-    text-decoration: none;
-    color: #999;
-    padding: 2vw;
-    font-family: monospace;
-}
-
-.nav-list > .nav-list-item > a:hover {
-    color: #FFF;
+  > .nav-list-item {
+    > a {
+        text-decoration: none;
+        color: #999;
+        padding: 2vw;
+        font-family: monospace;
+    }
+    > a:hover {
+        color: #FFF;
+    }
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -44,7 +47,7 @@
         padding: 2vw;
         font-size: 3vh;
         border: none;
-        background-color: #343a40;
+        background-color: $backgroundColor;
         color: #999;
         align-self: flex-start;
 

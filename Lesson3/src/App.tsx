@@ -9,6 +9,7 @@ import HomeComponent from './components/HomeComponent';
 import AboutComponent from './components/AboutComponent';
 import ContactComponent from './components/ContactComponent';
 import NavMenuComponent from './components/NavMenuComponent';
+import ListComponent from './components/ListComponent';
 
 interface AppProps {
   // Props go here
@@ -23,12 +24,16 @@ export default class App extends Component<AppProps> {
     return (
       <Router>
         <NavMenuComponent />
+
         <Switch>
           <Route path="/about">
-            <AboutComponent></AboutComponent>
+            <AboutComponent />
           </Route>
           <Route path="/contact">
-            <ContactComponent></ContactComponent>
+            <ContactComponent />
+          </Route>
+          <Route path="/list">
+            <ListComponent maxItems={4} altText={'Sample alt-text'} title={'Example Title'} imageLink={'https://i.redd.it/8i7frhmtdlh51.jpg'}/>
           </Route>
           <Route path="/" >
             <HomeComponent />
