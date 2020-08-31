@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% block title %}<title>Cat Pics</title>{% endblock %}
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    </head>
+    <body>
+    {% block navbar %}
+        <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="{% url 'index' %}">Cat Pics</a>
+
+      <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicNav"
+        aria-controls="basicNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="basicNav">
+
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'pic-feed' %}">Feed</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'pic-upload' %}">Upload</a>
+          </li>
+        </ul>
+        <!-- Links -->
+
+        <form class="form-inline">
+          <div class="md-form my-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          </div>
+        </form>
+      </div>
+      <!-- Collapsible content -->
+    </nav>
+    {% endblock %}
+    <div class="container">
+      <div class="justify-content-center">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+    </body>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    {% block scripts %}{% endblock %}
+</html>

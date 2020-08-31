@@ -1,0 +1,23 @@
+{% extends 'default_layout.html' %}
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="custom-file">
+      <input type="file" name="image" accept="image/*" class="custom-file-input" id="{{ form.image.id_for_label }}">
+      <label for="{{ form.image.id_for_label }}" class="custom-file-label">Image</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+  </form>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+    $('#{{ form.image.id_for_label }}').on('change',function(){
+        // get the file name
+        let fileName = $(this).val();
+        // replace the "Choose a file" label
+        $(this).next('.custom-file-label').html(fileName);
+    })
+    </script>
+{% endblock %}
