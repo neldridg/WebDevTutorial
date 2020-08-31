@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'CatPics.apps.CatpicsConfig',
-    'crispy_forms',
 ]
 
 MIDDLEWARE = [
